@@ -1,6 +1,7 @@
 class BankService {
   validatePin(cardNumber, pin) {
-    return pin === "1234";
+    const pins = { "0000": "1234", 1111: "5678" };
+    return pins[cardNumber] === pin;
   }
 }
 
